@@ -26,7 +26,7 @@ function Projects({ projects }: Props) {
         {projects?.map((p, i) => (
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
-            key={i}
+            key={p._id}
           >
             <motion.img
               initial={{
