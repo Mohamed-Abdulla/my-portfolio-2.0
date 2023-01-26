@@ -3,7 +3,7 @@ import createImageUrlBuilder from "@sanity/image-url";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "production"; // "pv8y60vp"
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET; // "production"
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION; // "2022-11-16"
+const apiVersion = "2023-01-1"; // "2022-11-16"
 const token = process.env.NEXT_PUBLIC_SANITY_TOKEN;
 
 export const config = {
@@ -11,7 +11,7 @@ export const config = {
   dataset,
   apiVersion,
   useCdn: process.env.NODE_ENV === "production",
-  // token:token
+  token: token,
 };
 
 export const sanityClient = createClient(config);
